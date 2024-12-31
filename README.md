@@ -24,7 +24,9 @@ ROW(INDIRECT("1:" & LEN(A1))): This generates an array of numbers from 1 to the 
 
 MID(A1, ROW(INDIRECT("1:" & LEN(A1))), 1): This extracts one character at a time from the original text in cell A1 based on the positions generated in step 1.
 VALUE(...): This attempts to convert each extracted character to a numeric value. If a character is not numeric, it will result in an error.
+
 ISNUMBER(...): This function checks if the conversion in step 3 resulted in a numeric value for each character. It returns TRUE for numeric characters and FALSE for non-numeric characters.
+
 IF(ISNUMBER(VALUE(...)), MID(A1, ROW(INDIRECT("1:" & LEN(A1))), 1), ""): This is an IF statement that replaces non-numeric characters with an empty string.
 TEXTJOIN("", TRUE, ...): Finally, the TEXTJOIN function concatenates the filtered numeric characters back into a single text string. The "" between the double quotes is the delimiter (nothing in this case), and TRUE is used to ignore any empty strings in the array.
 This formula essentially filters out non-numeric characters from the original text in cell A1, leaving only the numeric characters.
