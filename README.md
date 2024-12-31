@@ -9,6 +9,8 @@ Dimension Tables: Product table and Customer table
 Fact Table: Sales table
 This structured approach was essential for building a robust data model and ensuring meaningful insights could be derived from the dashboard.
 
+![dataModel](data-model.png)
+
 ### Excel Documentation for Data Cleaning
 Changing the phone number to only string
 =TEXTJOIN("", TRUE, IF(ISNUMBER(VALUE(MID(A1, ROW(INDIRECT("1:" & LEN(A1))), 1))), MID(A1, ROW(INDIRECT("1:" & LEN(A1))), 1), ""))
