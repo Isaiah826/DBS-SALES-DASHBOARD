@@ -10,6 +10,8 @@ Fact Table: Sales table
 This structured approach was essential for building a robust data model and ensuring meaningful insights could be derived from the dashboard.
 
 ![dataModel](data-model.png)
+### DBS SALES DASHBOARD
+![salesdashboard](DBS_Sales.png)
 
 ### Excel Documentation for Data Cleaning
 Changing the phone number to only string
