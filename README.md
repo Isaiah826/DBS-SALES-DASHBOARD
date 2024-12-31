@@ -21,6 +21,7 @@ Changing the phone number to only string
 
 Explanation
 ROW(INDIRECT("1:" & LEN(A1))): This generates an array of numbers from 1 to the length of the text in cell A1. It's used to create the positions for each character in the text.
+
 MID(A1, ROW(INDIRECT("1:" & LEN(A1))), 1): This extracts one character at a time from the original text in cell A1 based on the positions generated in step 1.
 VALUE(...): This attempts to convert each extracted character to a numeric value. If a character is not numeric, it will result in an error.
 ISNUMBER(...): This function checks if the conversion in step 3 resulted in a numeric value for each character. It returns TRUE for numeric characters and FALSE for non-numeric characters.
